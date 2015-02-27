@@ -30,7 +30,6 @@ import java.util.List;
  * @version 1.0
  */
 public abstract class Contact_Implement implements IContact_Provider {
-    protected boolean m_bRunCardDetection = true;
 
     private static final String GET_NUMBER_PROCESS = "Récupération des numéros";
     private static final String GET_PHOTO_PROCESS = "Récupération des images";
@@ -127,9 +126,6 @@ public abstract class Contact_Implement implements IContact_Provider {
         {
             if(process != null)
             {
-                m_bRunCardDetection = false;
-
-
                 for(Thread thread : process)
                 {
                     for(int time = 0 ; time <timeout; time++)
